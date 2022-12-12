@@ -1,3 +1,7 @@
 .goalsList {
     list-style-type: none;
 }
+
+body {
+    max-width: 100ch;
+}
