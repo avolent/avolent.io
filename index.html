@@ -15,7 +15,8 @@
       Will<br>
       Australia/Sydney<br>
       <a href="https://github.com/avolent">github.com/avolent</a><br>
-      December 2022
+      December 2022<br>
+      <button id="dark-mode-toggle">Dark mode</button>
     </p>
   </header>
   <nav role="navigation">
@@ -105,5 +106,19 @@
         </p>
     </article>
   </main>
+  <script type="text/javascript">
+    const darkModeToggle = document.getElementById('dark-mode-toggle')
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.toggle('latex-dark')
+    }
+    darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('latex-dark')
+        if (localStorage.getItem('darkMode') === 'true') {
+            localStorage.setItem('darkMode','false');
+        } else {
+            localStorage.setItem('darkMode','true');
+        }
+    })
+</script>
 </body>
 </html>
