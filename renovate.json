@@ -1,0 +1,33 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "schedule": [
+    "before 3am on Monday"
+  ],
+  "automerge": false,
+  "prConcurrentLimit": 5,
+  "labels": [
+    "dependencies"
+  ],
+  "semanticCommits": "enabled",
+  "commitMessagePrefix": "chore(deps):",
+  "prTitle": "chore(deps): {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}major{{else}}{{#if isMinor}}minor{{else}}patch{{/if}}{{/if}} update{{/if}}{{#if groupName}} for {{groupName}}{{else}} {{depName}}{{/if}}",
+  "packageRules": [
+    {
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions",
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true,
+      "labels": ["dependencies", "github-actions"],
+      "semanticCommitType": "ci",
+      "semanticCommitScope": "deps"
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": ["security"]
+  }
+}
