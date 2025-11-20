@@ -1,0 +1,20 @@
+{
+  "name": "avolent.io",
+  "version": "1.0.0",
+  "description": "Personal portfolio website - avolent.io",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avolent/avolent.io.git"
+  },
+  "author": "William Chrisp",
+  "license": "MIT",
+  "scripts": {
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^24.0.0"
+  }
+}

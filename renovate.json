@@ -1,33 +1,55 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    ":dependencyDashboard",
+    ":semanticCommits",
+    ":separateMajorReleases"
   ],
-  "schedule": [
-    "before 3am on Monday"
-  ],
-  "automerge": false,
-  "prConcurrentLimit": 5,
-  "labels": [
-    "dependencies"
-  ],
+  "labels": ["dependencies"],
+  "schedule": ["before 9am on monday"],
+  "timezone": "Australia/Sydney",
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 5,
   "semanticCommits": "enabled",
   "commitMessagePrefix": "chore(deps):",
-  "prTitle": "chore(deps): {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}major{{else}}{{#if isMinor}}minor{{else}}patch{{/if}}{{/if}} update{{/if}}{{#if groupName}} for {{groupName}}{{else}} {{depName}}{{/if}}",
+  "commitMessageAction": "update",
+  "commitMessageTopic": "{{depName}}",
+  "commitMessageExtra": "to {{newVersion}}",
+  "ignoreTests": false,
+  "reviewersFromCodeOwners": true,
+  "assignAutomerge": false,
   "packageRules": [
     {
+      "description": "Group GitHub Actions updates",
+      "groupName": "github actions",
       "matchManagers": ["github-actions"],
-      "groupName": "GitHub Actions",
+      "semanticCommitType": "ci",
+      "semanticCommitScope": "actions",
       "automerge": true,
       "automergeType": "pr",
-      "platformAutomerge": true,
-      "labels": ["dependencies", "github-actions"],
-      "semanticCommitType": "ci",
-      "semanticCommitScope": "deps"
+      "automergeStrategy": "squash"
+    },
+    {
+      "description": "Require approval for major updates",
+      "matchUpdateTypes": ["major"],
+      "labels": ["dependencies", "major-update"],
+      "automerge": false,
+      "prPriority": 10
+    },
+    {
+      "description": "Pin GitHub Action versions to commit SHA",
+      "matchManagers": ["github-actions"],
+      "pinDigests": true
     }
   ],
   "vulnerabilityAlerts": {
+    "labels": ["security", "dependencies"],
+    "automerge": true,
+    "assignees": []
+  },
+  "lockFileMaintenance": {
     "enabled": true,
-    "labels": ["security"]
+    "schedule": ["before 9am on the first day of the month"]
   }
 }
