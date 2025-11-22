@@ -19,7 +19,7 @@ echo -e "${BLUE}═════════════════════�
 echo
 
 # Check if we're in a git repository
-if [ ! -d ".git" ]; then
+if [[ ! -d ".git" ]]; then
     echo -e "${RED}❌ Error: Not in a git repository${NC}"
     exit 1
 fi
@@ -41,7 +41,7 @@ echo
 # Remove old .githooks configuration if it exists
 if git config --get core.hooksPath >/dev/null 2>&1; then
     OLD_PATH=$(git config --get core.hooksPath)
-    echo -e "${YELLOW}⚠${NC}  Removing old hooksPath configuration: $OLD_PATH"
+    echo -e "${YELLOW}⚠${NC}  Removing old hooksPath configuration: ${OLD_PATH}"
     git config --unset core.hooksPath
 fi
 
