@@ -1,0 +1,67 @@
+# Project: avolent.io
+
+## Project Overview
+- **Type**: Static Website
+- **Tech Stack**: HTML, CSS, Shell Scripts
+- **Purpose**: Personal website (avolent.io)
+
+## Standardization Compliance
+
+**IMPORTANT**: This repository follows standardized configuration defined in:
+- **Parent Standards**: `../.claude` (one folder up from this repository)
+
+When making changes to CI/CD, pre-commit hooks, or tooling in THIS repository:
+1. ✅ Read the parent `.claude` file first
+2. ✅ Check if this change should apply to other repositories
+3. ✅ Verify consistency across all 11 repositories in `/Users/williamchrisp/Documents/git/`
+4. ✅ Apply the same change to all affected repositories simultaneously
+
+## Repository-Specific Configuration
+
+### Technology Stack
+- **Frontend**: HTML, CSS
+- **Build**: Shell scripts
+- **Deployment**: Static hosting
+
+### Required Workflows
+- ✅ `commitlint.yml` - Commit message validation
+- ✅ `semantic-pr.yml` - PR title validation
+- ✅ `renovate.yml` - Dependency updates
+- ✅ `release.yml` - Semantic releases
+- ✅ `deploy.yml` - Automated deployment
+- ✅ `validate.yml` - HTML/CSS validation
+- ✅ `link-check.yml` - Broken link detection
+
+### Required Pre-commit Hooks
+Standard hooks from parent `.claude` PLUS:
+- ✅ `shellcheck-py/shellcheck-py@v0.11.0.1`
+- ✅ `scop/pre-commit-shfmt@v3.12.0-2`
+- ✅ `adrienverge/yamllint@v1.37.1`
+
+### Security Requirements
+- ✅ detect-secrets with `.secrets.baseline`
+- ✅ shellcheck for build script security
+
+### Project-Specific Notes
+- check-yaml uses --unsafe for flexibility
+- Link checking runs on schedule and creates issues for broken links
+- Deploy workflow has concurrency control to prevent parallel deployments
+- Validation workflow checks HTML/CSS standards
+
+## Cross-Repository Verification
+
+Before committing changes that affect:
+- Shell hooks → Check: proton-sieve, config, pipelines
+- Deployment workflows → Check: cortex
+- Pre-commit hooks → Check: ALL repositories
+
+## Exceptions from Standard
+- **link-check.yml**: Unique workflow for monitoring website health
+- **validate.yml**: HTML/CSS validation specific to static sites
+- **No CI workflow**: Static site doesn't need complex CI
+
+## Maintenance Reminders
+- Review broken links weekly from link-check issues
+- Keep HTML/CSS validation rules updated
+- Test deployment workflow changes carefully
+- Sync shellcheck/shfmt with other shell projects

@@ -14,7 +14,7 @@ repos:
         args: [--unsafe]
       - id: check-json
       - id: check-added-large-files
-        args: ['--maxkb=1000']
+        args: ["--maxkb=1000"]
       - id: check-merge-conflict
       - id: detect-private-key
       - id: mixed-line-ending
@@ -34,7 +34,7 @@ repos:
     rev: v3.12.0-2
     hooks:
       - id: shfmt
-        args: [-w, -i, '4', -ci]
+        args: [-w, -i, "4", -ci]
 
   # YAML linting
   - repo: https://github.com/adrienverge/yamllint
@@ -47,7 +47,14 @@ repos:
     rev: v0.46.0
     hooks:
       - id: markdownlint
-        args: [--fix]
+        args: [--fix, --config, .markdownlint.yaml]
+
+  # Check for secrets
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+      - id: detect-secrets
+        args: ["--baseline", ".secrets.baseline"]
 
   # Commit message linting
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
@@ -55,4 +62,4 @@ repos:
     hooks:
       - id: commitlint
         stages: [commit-msg]
-        additional_dependencies: ['@commitlint/config-conventional']
+        additional_dependencies: ["@commitlint/config-conventional"]
