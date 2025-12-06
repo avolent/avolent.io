@@ -46,7 +46,7 @@
                 Australia/Perth<br />
                 <a href="https://github.com/avolent">github.com/avolent</a
                 ><br />
-                November 2025<br />
+                December 2025<br />
                 <button id="dark-mode-toggle">Dark mode</button>
             </p>
         </header>
@@ -59,13 +59,15 @@
                     <a href="#projects">Projects</a>
                     <ol>
                         <li><a href="#p1">Cortex.wiki</a></li>
-                        <li>
-                            <a href="#p2"
-                                >AWS Serverless Web Application Template</a
-                            >
-                        </li>
-                        <li><a href="#p3">sustenance.py</a></li>
-                        <li><a href="#p4">wifi.py</a></li>
+                        <li><a href="#p2">Cloudspawn (Gamestack)</a></li>
+                        <li><a href="#p3">GCP Infrastructure</a></li>
+                        <li><a href="#p4">GoConfig</a></li>
+                        <li><a href="#p5">macpac</a></li>
+                        <li><a href="#p6">Talos Kubernetes</a></li>
+                        <li><a href="#p7">Proton Sieve Filters</a></li>
+                        <li><a href="#p8">Standardized Pipelines</a></li>
+                        <li><a href="#p9">CV & Cover Letter</a></li>
+                        <li><a href="#p10">Configs</a></li>
                     </ol>
                 </li>
                 <li><a href="#skills">Skills</a></li>
@@ -81,10 +83,21 @@
                     little bit about me.
                 </p>
                 <h2 id="learnings">Yearly Learnings</h2>
+                <b>2025 Learnings</b>
+                <ul class="learningsList">
+                    <li>[X] - Go Programming (Production Applications)</li>
+                    <li>[X] - HTMX & Templ (Server-side Rendering)</li>
+                    <li>[X] - Talos Linux (Immutable Kubernetes OS)</li>
+                    <li>[X] - Astro (Static Site Generation)</li>
+                    <li>[X] - Sieve Language (Email Filtering)</li>
+                    <li>[X] - Multi-architecture Kubernetes (ARM64 + AMD64)</li>
+                    <li>[X] - LaTeX (Professional Document Preparation)</li>
+                    <li>[X] - macOS Automation & System Configuration</li>
+                    <li>[X] - Advanced GitHub Actions (Reusable Workflows)</li>
+                </ul>
                 <b>2024 Learnings</b>
                 <ul class="learningsList">
-                    <li>[ ] - GKE: Google Kubernetes Engine</li>
-                    <li>[ ] - CKA: Certified Kubernetes Administrator</li>
+                    <li>[X] - GKE: Google Kubernetes Engine</li>
                     <li>[X] - Kubernetes External Secrets Manager</li>
                     <li>[X] - ArgoCD</li>
                     <li>[X] - Helm</li>
@@ -131,39 +144,98 @@
                 </ul>
                 <h2 id="projects">Projects</h2>
                 <h4 id="p1">Cortex Wiki</h4>
-                <a href="https://cortex.wiki">Wiki</a>
+                <a href="https://cortex.wiki">Wiki</a> |
+                <a href="https://github.com/avolent/cortex">Github</a>
                 <p>
-                    The goal of this wiki is to be an accumulation and
-                    amalgamation of information from various different
-                    topics.<br />
-                    Hoping that the act of writing in the wiki format improves
-                    the ability to retain and explain whatever I have learnt.
-                    Something a long the lines of the Feynman Technique - a
-                    mental model (a breakdown of his personal thought process)
-                    to convey information using concise thoughts and simple
-                    language.<br />
+                    A personal knowledge base built with Astro, synced from
+                    Obsidian. The goal is to accumulate and amalgamate
+                    information from various topics, using the Feynman Technique
+                    - building understanding through clear explanation using
+                    concise thoughts and simple language. Contains technical
+                    guides, tutorials, project brain dumps, and development best
+                    practices.
                 </p>
-                <h4 id="p2">AWS Serverless Web App Template (Archived)</h4>
-                <a href="https://github.com/avolent/aws-application-template"
-                    >Github</a
-                >
+                <h4 id="p2">Cloudspawn (Gamestack)</h4>
+                <a href="https://cloudspawn.io">Live Site</a> |
+                <a href="https://github.com/avolent/gamestack">Github</a>
                 <p>
-                    Repository for a simple AWS serverless web application which
-                    can be deployed via Terraform.
+                    A Kubernetes-powered game server hosting platform built with
+                    Go, HTMX, Templ, and Google Cloud Platform. Deploy and
+                    manage game servers (Minecraft, Valheim, V-Rising) on
+                    Kubernetes with server-side rendering, clean architecture,
+                    and cost optimization through scale-to-zero serverless
+                    infrastructure.
                 </p>
-                <h4 id="p3">sustenance.py (Archived)</h4>
-                <a href="https://github.com/avolent/sustenance">Github</a>
-                <p>A simple meal planner!</p>
-                <h4 id="p4">wifi.py (Archived)</h4>
-                <a href="https://github.com/avolent/wifi">Github</a>
+                <h4 id="p3">GCP Infrastructure</h4>
+                <a href="https://github.com/avolent/gcp">Github</a>
                 <p>
-                    Turn your PC into a WiFi mapping tool. Early stages!<br />
-                    This was a simple tool I created for Windows PCs to help
-                    resolve issues around the my workplace. It helped
-                    troubleshoot roaming issues and assisted with tuning 80+ AP
-                    power levels, adjusting channels and positions of
-                    Sophos/Aruba access points to give 20+ customers the best
-                    service.
+                    GCP Landing Zone infrastructure managed with Terraform,
+                    featuring automated deployment, security scanning, and best
+                    practices enforcement. Complete CI/CD pipeline with
+                    pre-commit hooks, conventional commits, and semantic
+                    versioning.
+                </p>
+                <h4 id="p4">GoConfig</h4>
+                <a href="https://github.com/avolent/goconfig">Github</a>
+                <p>
+                    A Go-based CLI tool for backing up and restoring
+                    configuration files across different environments with
+                    rsync-like behavior. Features intelligent sync, automatic
+                    diff previews, safety checks for system-critical
+                    directories, and support for inclusion/exclusion patterns.
+                </p>
+                <h4 id="p5">macpac</h4>
+                <a href="https://github.com/avolent/macpac">Github</a>
+                <p>
+                    Infrastructure as Code for macOS. Declarative configuration
+                    management tool that manages your entire Mac setup in a
+                    single YAML file. Handles Homebrew packages, system settings
+                    via macOS defaults, dotfiles, and custom scripts with
+                    pre/post-apply hooks.
+                </p>
+                <h4 id="p6">Talos Kubernetes Infrastructure</h4>
+                <a href="https://github.com/avolent/talos">Github</a>
+                <p>
+                    Comprehensive deployment solution for Talos Linux clusters
+                    supporting multiple host architectures (AMD64, ARM64)
+                    including x86 PCs, mini PCs, and Raspberry Pi devices.
+                    Integrated Kubernetes orchestration, monitoring stack, and
+                    automated DNS management.
+                </p>
+                <h4 id="p7">Proton Sieve Filters</h4>
+                <a href="https://github.com/avolent/proton-sieve">Github</a>
+                <p>
+                    Comprehensive email filtering rules for Proton Mail using
+                    Sieve language. Designed for catchall email setups with a
+                    two-tier organization system: tags for multiple labels
+                    (Security, VIP, Newsletter) and folders for exclusive
+                    assignment (Social, Travel, Banking, Shopping).
+                </p>
+                <h4 id="p8">Standardized Pipelines</h4>
+                <a href="https://github.com/avolent/pipelines">Github</a>
+                <p>
+                    Standardized GitHub Actions workflow templates following
+                    2025 best practices. Includes universal workflows (Renovate,
+                    Commitlint, Semantic PR), and language-specific templates
+                    for Go, Node.js, and Terraform with automated releases and
+                    validation.
+                </p>
+                <h4 id="p9">CV & Cover Letter</h4>
+                <a href="https://github.com/avolent/cv">Github</a>
+                <p>
+                    Professional CV and cover letter templates written in LaTeX
+                    with automated PDF builds and releases via GitHub Actions.
+                    Features semantic versioning validation, conventional
+                    commits enforcement, and automated release management.
+                </p>
+                <h4 id="p10">Configs</h4>
+                <a href="https://github.com/avolent/configs">Github</a>
+                <p>
+                    Comprehensive configuration files repository containing
+                    dotfiles and settings for Aerospace window manager, Git,
+                    Obsidian, Oh My Zsh, Zed editor, and Zsh shell. Centralized
+                    management of personal development environment
+                    configurations.
                 </p>
                 <h2 id="skills">Skills</h2>
                 <p>My current skills are</p>
