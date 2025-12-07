@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/avolent/avolent.io/compare/v1.0.1...v1.0.2) (2025-12-07)
+
+
+### Bug Fixes
+
+* update gamestack link ([c688ee9](https://github.com/avolent/avolent.io/commit/c688ee900df650ffe67fca398833f440f8f35048))
+
 ## [1.0.1](https://github.com/avolent/avolent.io/compare/v1.0.0...v1.0.1) (2025-12-06)
 
 
