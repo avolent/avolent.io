@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/avolent/avolent.io/compare/v1.0.3...v1.1.0) (2025-12-07)
+
+
+### Features
+
+* **ci:** add AI-powered code review and issue triage workflows ([d753e4a](https://github.com/avolent/avolent.io/commit/d753e4a1a6e09082a85709d7025c76adc97a1fe7))
+
 ## [1.0.3](https://github.com/avolent/avolent.io/compare/v1.0.2...v1.0.3) (2025-12-07)
 
 
