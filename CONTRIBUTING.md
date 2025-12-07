@@ -11,11 +11,13 @@ Before making commits, it's **highly recommended** to set up local git hooks for
 ```
 
 This will:
+
 - Configure git to use the `.githooks` directory
 - Enable local commit message validation
 - Catch formatting issues **before** you push
 
 The hook validates:
+
 - ✅ Conventional commit format
 - ✅ Lowercase type
 - ✅ Lowercase subject start
@@ -43,19 +45,19 @@ All commit messages MUST follow this format:
 
 ### Commit Types
 
-| Type | Description | Version Bump |
-|------|-------------|--------------|
-| `feat` | A new feature | MINOR (0.x.0) |
-| `fix` | A bug fix | PATCH (0.0.x) |
-| `docs` | Documentation only changes | PATCH |
-| `style` | Changes that don't affect code meaning (formatting, etc.) | PATCH |
-| `refactor` | Code change that neither fixes a bug nor adds a feature | PATCH |
-| `perf` | Performance improvement | PATCH |
-| `test` | Adding or updating tests | PATCH |
-| `build` | Changes to build system or dependencies | PATCH |
-| `ci` | Changes to CI configuration files and scripts | PATCH |
-| `chore` | Other changes that don't modify src or test files | No release |
-| `revert` | Reverts a previous commit | PATCH |
+| Type       | Description                                               | Version Bump  |
+| ---------- | --------------------------------------------------------- | ------------- |
+| `feat`     | A new feature                                             | MINOR (0.x.0) |
+| `fix`      | A bug fix                                                 | PATCH (0.0.x) |
+| `docs`     | Documentation only changes                                | PATCH         |
+| `style`    | Changes that don't affect code meaning (formatting, etc.) | PATCH         |
+| `refactor` | Code change that neither fixes a bug nor adds a feature   | PATCH         |
+| `perf`     | Performance improvement                                   | PATCH         |
+| `test`     | Adding or updating tests                                  | PATCH         |
+| `build`    | Changes to build system or dependencies                   | PATCH         |
+| `ci`       | Changes to CI configuration files and scripts             | PATCH         |
+| `chore`    | Other changes that don't modify src or test files         | No release    |
+| `revert`   | Reverts a previous commit                                 | PATCH         |
 
 ### Examples
 
